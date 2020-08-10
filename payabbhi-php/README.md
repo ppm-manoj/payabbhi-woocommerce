@@ -3,7 +3,7 @@
 [![Packagist](https://poser.pugx.org/payabbhi/payabbhi-php/downloads)](https://packagist.org/packages/payabbhi/payabbhi-php)
 [![Packagist](https://poser.pugx.org/payabbhi/payabbhi-php/v/stable.svg)](https://packagist.org/packages/payabbhi/payabbhi-php)
 
-Make sure you have signed up for your [Payabbhi Account](https://payabbhi.com/docs/account) and downloaded the [API keys](https://payabbhi.com/docs/account/#api-keys) from the [Portal](https://payabbhi.com/portal).
+Make sure you have signed up for your [Payabbhi Account](https://payabbhi.com/docs/account) and downloaded the [API keys](https://payabbhi.com/docs/developers/api-keys) from the [Portal](https://payabbhi.com/portal).
 
 
 ## Requirements
@@ -18,7 +18,8 @@ The library can be installed via [Composer](http://getcomposer.org/). Run the fo
 $ composer require payabbhi/payabbhi-php
 ```
 
-In order to use the library, use Composer's [autoload](https://getcomposer.org/doc/00-intro.md#autoloading) feature:
+Start using the library as per Composer [autoloading](https://getcomposer.org/doc/01-basic-usage.md#autoloading):
+simply include `vendor/autoload.php`, available as part of library installation via Composer.
 
 ```php
 require_once('vendor/autoload.php');
@@ -26,17 +27,20 @@ require_once('vendor/autoload.php');
 
 ## Manual Installation
 
-For manual installation, include `init.php` in your code.
+In case Composer is not used, download the latest release from [Releases](https://github.com/payabbhi/payabbhi-php/releases).
+For using the manually downloaded library, simply include `init.php` in your code.
 
 ```php
 require_once('/path/to/payabbhi-php/init.php');
 ```
 
+For manual installation, make sure that the [dependencies](#dependencies) are resolved.
+
 ## Documentation
 
 Please refer to:
 - [PHP Lib Docs](https://payabbhi.com/docs/api/?php)
-- [Integration Guide](https://payabbhi.com/docs/integration)
+- [Integration Guide](https://payabbhi.com/docs/payments/integration)
 
 ## Dependencies
 
@@ -127,6 +131,42 @@ $attributes = array(
 $client->utility->verifyPaymentSignature($attributes);
 
 ```
+
+### Verifying webhook signature
+
+```php
+$client->utility->verifyWebhookSignature($payload,$actualSignature,$secret);
+
+// replayInterval is optional
+$client->utility->verifyWebhookSignature($payload,$actualSignature,$secret,$replayInterval);
+
+```
+
+### Customers
+
+Refer to [PHP Lib Docs](https://payabbhi.com/docs/api/?php#customers)
+
+### Invoices
+
+Refer to [PHP Lib Docs](https://payabbhi.com/docs/api/?php):
+- [Invoices](https://payabbhi.com/docs/api/?php#invoices)
+- [Invoice Items](https://payabbhi.com/docs/api/?php#invoice-items)
+
+### Subscriptions
+
+Refer to [PHP Lib Docs](https://payabbhi.com/docs/api/?php):
+- [Products](https://payabbhi.com/docs/api/?php#products)
+- [Plans](https://payabbhi.com/docs/api/?php#plans)
+- [Subscriptions](https://payabbhi.com/docs/api/?php#subscriptions)
+
+### Transfers
+
+Refer to [PHP Lib Docs](https://payabbhi.com/docs/api/?php#transfers)
+
+### Events
+
+Refer to [PHP Lib Docs](https://payabbhi.com/docs/api/?php#events)
+
 
 ## Development
 
