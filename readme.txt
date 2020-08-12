@@ -1,8 +1,8 @@
 === Payabbhi Payments - WooCommerce Integration ===
 Tags: credit card, wallet, netbanking, woocommerce, payabbhi
-Requires at least: 4.4
-Tested up to: 4.8
-Stable tag: 1.0.0
+Requires at least: 2.4.2
+Tested up to: 4.3.1
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,7 +13,7 @@ Payabbhi Payments - WooCommerce Integration
 This extension builds on top of Payabbhi PHP Library to provide seamless
 integration of Payabbhi Checkout with WooCommerce.
 
-The plugin is compatible with WooCommerce v2.4 onwards (which includes v3.x).
+The plugin is compatible with WooCommerce v2.4 onwards (which includes v3.x & v4.x).
 
 == Installation ==
 

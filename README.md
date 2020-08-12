@@ -2,7 +2,7 @@
 
 This extension builds on top of Payabbhi PHP Library to provide seamless integration of [Payabbhi Checkout ](https://payabbhi.com/docs/checkout) with WooCommerce.
 
-The plugin is compatible with WooCommerce v2.4 onwards (which includes v3.x).
+The plugin is compatible with WooCommerce v2.4 onwards (which includes v3.x & v4.x).
 
 ### Installation
 Make sure you have signed up for your [Payabbhi Account](https://payabbhi.com/docs/account) and downloaded the [API keys](https://payabbhi.com/docs/account/#api-keys) from the [Portal](https://payabbhi.com/portal).

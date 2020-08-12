@@ -4,7 +4,7 @@
 Plugin Name: Payabbhi WooCommerce
 Plugin URI: https://payabbhi.com
 Description: Payabbhi Payment Gateway Integration for WooCommerce
-Version: 1.0.0
+Version: 1.0.1
 Author: Payabbhi Team
 Author URI: https://payabbhi.com
 */
@@ -46,7 +46,7 @@ function init_payabbhi_woocommerce()
 
             $cb = array($this, 'process_admin_options');
 
-            if (version_compare(WOOCOMMERCE_VERSION, '2.0.0', '>='))
+            if (version_compare(WOOCOMMERCE_VERSION, '1.0.1', '>='))
             {
                 add_action("woocommerce_update_options_payment_gateways_{$this->id}", $cb);
             }
@@ -320,7 +320,7 @@ EOT;
                     'redirect' => add_query_arg('key', $wc_order->order_key, $wc_order->get_checkout_payment_url(true))
                 );
             }
-            else if (version_compare(WOOCOMMERCE_VERSION, '2.0.0', '>='))
+            else if (version_compare(WOOCOMMERCE_VERSION, '1.0.1', '>='))
             {
                 return array(
                     'result' => 'success',
