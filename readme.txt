@@ -1,6 +1,6 @@
 === Payabbhi Payments - WooCommerce Integration ===
 Tags: credit card, wallet, netbanking, woocommerce, payabbhi
-Requires at least: 2.4.2
+Minimum WooCommerce version supported: 2.4.2
 Tested up to: 4.3.1
 Stable tag: 1.0.1
 License: GPLv3
